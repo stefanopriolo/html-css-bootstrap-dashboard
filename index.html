@@ -28,61 +28,77 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">Hidden brand</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
+          <div class="collapse navbar-collapse d-flex" id="navbarTogglerDemo01">
+            <img
+              class="d-none d-md-block pe-3 logo-size"
+              src="/img/logo.svg"
+              alt=""
+            />
+            <img class="d-md-none" src="/img/mobile-logo.png" alt="" />
+            <form class="flex-grow-1" role="search">
               <input
                 class="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
             </form>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <i class="nav-link nav-icons-color fa-solid fa-list-ul"></i>
+              </li>
+              <li class="nav-item">
+                <i
+                  class="nav-link nav-icons-color fa-solid fa-circle-question"
+                ></i>
+              </li>
+              <li class="nav-item">
+                <i
+                  class="nav-link nav-icons-color fa-solid fa-ellipsis-vertical"
+                ></i>
+              </li>
+              <li class="nav-item">
+                <i class="nav-link fa-solid fa-bell" style="color: #f58900"></i>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
     </header>
     <main class="d-flex flex-grow-1">
       <!-- ------------------------- Side-Bar -------------------------- -->
-      <div class="side-bar px-3 py-4 text-white">
+      <div class="side-bar px-3 py-4 text-white d-flex flex-column">
         <ul class="nav nav-hover flex-column">
           <li class="nav-item">
-            <a class="nav-link" href=""> <i class="fas fa-home"></i> Home</a>
+            <a class="nav-link" href="">
+              <i class="fas fa-home"></i>
+              <span class="d-none d-md-inline">Home</span>
+            </a>
           </li>
         </ul>
-        <ul class="nav nav-hover flex-column">
+        <ul class="nav nav-hover">
           <li class="nav-item">
-            <a class="nav-link" href=""> <i class="fas fa-home"></i> Stats</a>
+            <a class="nav-link" href="">
+              <i class="fa-solid fa-chart-simple" style="color: #ffffff"></i>
+              <span class="d-none d-md-inline">Stats</span>
+            </a>
           </li>
         </ul>
-        <ul class="nav nav-hover flex-column">
+        <ul class="nav nav-hover">
           <li class="nav-item">
-            <a class="nav-link" href=""> <i class="fas fa-home"></i> Signals</a>
+            <a class="nav-link" href="">
+              <i class="fa-solid fa-signal" style="color: #ffffff"></i>
+              <span class="d-none d-md-inline">Signals</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav nav-hover mt-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="fa-solid fa-gear" style="color: #ffffff"></i>
+              <span class="d-none d-md-inline">Admin</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -118,18 +134,235 @@
         </section>
         <!-- ------------------------- Main cards -------------------------- -->
         <div class="main-cards pt-4">
-          <div class="container">
+          <div class="container-fluid p-4">
             <div class="row">
               <div class="col">
-                <div class="card" style="width: 18rem">
-                  <img src="..." class="card-img-top" alt="..." />
+                <div class="card">
+                  <div class="card-header">
+                    <h2>Prossime Classi</h2>
+                  </div>
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Nome</th>
+                          <th scope="col">Data inizio</th>
+                          <th scope="col">ROI</th>
+                          <th scope="col">Stato</th>
+                          <th scope="col">Azioni</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div
+                              class="bg-icon-table d-inline-block rounded-circle"
+                            >
+                              <i
+                                class="fa-solid fa-code"
+                                style="color: white"
+                              ></i>
+                            </div>
+                            Classe 75
+                          </td>
+                          <td>15 Feb 2021</td>
+                          <td>20%</td>
+                          <td>
+                            <span class="badge text-bg-success">Done</span>
+                          </td>
+                          <td>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div
+                              class="bg-icon-table d-inline-block rounded-circle"
+                            >
+                              <i
+                                class="fa-solid fa-code"
+                                style="color: white"
+                              ></i>
+                            </div>
+                            Classe 76
+                          </td>
+                          <td>16 Feb 2021</td>
+                          <td>20%</td>
+                          <td>
+                            <span class="badge text-bg-success">Done</span>
+                          </td>
+                          <td>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div
+                              class="bg-icon-table d-inline-block rounded-circle"
+                            >
+                              <i
+                                class="fa-solid fa-code"
+                                style="color: white"
+                              ></i>
+                            </div>
+                            Classe 77
+                          </td>
+                          <td>17 Feb 2021</td>
+                          <td>20%</td>
+                          <td>
+                            <span class="badge text-bg-warning">process</span>
+                          </td>
+                          <td>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div
+                              class="bg-icon-table d-inline-block rounded-circle"
+                            >
+                              <i
+                                class="fa-solid fa-code"
+                                style="color: white"
+                              ></i>
+                            </div>
+                            Classe 78
+                          </td>
+                          <td>18 Feb 2021</td>
+                          <td>20%</td>
+                          <td>
+                            <span class="badge text-bg-success">Done</span>
+                          </td>
+                          <td>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div
+                              class="bg-icon-table d-inline-block rounded-circle"
+                            >
+                              <i
+                                class="fa-solid fa-code"
+                                style="color: white"
+                              ></i>
+                            </div>
+                            Classe 79
+                          </td>
+                          <td>15 Feb 2021</td>
+                          <td>20%</td>
+                          <td>
+                            <span class="badge text-bg-danger">failed</span>
+                          </td>
+                          <td>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div
+                              class="bg-icon-table d-inline-block rounded-circle"
+                            >
+                              <i
+                                class="fa-solid fa-code"
+                                style="color: white"
+                              ></i>
+                            </div>
+                            Classe 80
+                          </td>
+                          <td>20 Feb 2021</td>
+                          <td>20%</td>
+                          <td>
+                            <span class="badge text-bg-success">Done</span>
+                          </td>
+                          <td>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div
+                              class="bg-icon-table d-inline-block rounded-circle"
+                            >
+                              <i
+                                class="fa-solid fa-code"
+                                style="color: white"
+                              ></i>
+                            </div>
+                            Classe 81
+                          </td>
+                          <td>21 Feb 2021</td>
+                          <td>20%</td>
+                          <td>
+                            <span class="badge text-bg-danger">failed</span>
+                          </td>
+                          <td>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div
+                              class="bg-icon-table d-inline-block rounded-circle"
+                            >
+                              <i
+                                class="fa-solid fa-code"
+                                style="color: white"
+                              ></i>
+                            </div>
+                            Classe 82
+                          </td>
+                          <td>22 Feb 2021</td>
+                          <td>20%</td>
+                          <td>
+                            <span class="badge text-bg-success">Done</span>
+                          </td>
+                          <td>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="btn-action rounded">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
 
