@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+}
+
+.side-bar {
+    width: 150px;
+    background-color: #051E34;
+    
+}
+
+.side-bar .nav {
+    --bs-nav-link-color: white;
+    --bs-nav-link-hover-color: black;
+}
+
+.side-bar .nav-hover .nav-link:hover {
+    background-color: white;
+}
+
+.side-bar .nav-link i {
+    margin-right: .5rem;
+}
+
+.bg-badge {
+    background-color: #155aba;
+}
